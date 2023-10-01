@@ -1,0 +1,63 @@
+from PyQt5.QtWidgets import *
+
+app = QApplication([])
+window = QWidget()
+mainLine = QHBoxLayout()
+
+text = QTextEdit()
+
+v1 = QVBoxLayout()
+v1.addWidget(text)
+mainLine.addLayout(v1)
+
+text1 = QLabel("Список заміток")
+window2 = QTextEdit()
+Create = QPushButton("Створити замітку")
+Delete = QPushButton("Видалити замітку")
+Save = QPushButton("Зберегти замітку")
+
+window3 = QTextEdit()
+line = QLineEdit()
+dodatu = QPushButton("Додати до замітки")
+Open = QPushButton("відкріпити від замітки")
+qwe = QPushButton("Шукати замітки по тегу")
+v2 = QVBoxLayout()
+v2.addWidget(text1)
+v2.addWidget(window2)
+
+mainLine.addLayout(v2)
+
+v3 = QHBoxLayout()
+v3.addWidget(Create)
+v3.addWidget(Delete)
+
+v2.addLayout(v3)
+
+v4 =QHBoxLayout()
+v4.addWidget(Save)
+
+v2.addLayout(v4)
+
+v5 = QVBoxLayout()
+v5.addWidget(window3)
+v2.addLayout(v5)
+
+v6 = QVBoxLayout()
+v6.addWidget(line)
+
+v2.addLayout(v6)
+
+v7 = QHBoxLayout()
+v7.addWidget(dodatu)
+v7.addWidget(Open)
+
+v2.addLayout(v7)
+
+v8 = QVBoxLayout()
+v8.addWidget(qwe)
+
+v2.addLayout(v8)
+
+window.setLayout(mainLine)
+window.show()
+app.exec()
